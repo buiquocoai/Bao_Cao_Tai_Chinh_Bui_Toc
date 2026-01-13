@@ -17,10 +17,10 @@
 
 body{
   margin:0;
-  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  font-family:"Segoe UI", Roboto, Arial, sans-serif;
   background:var(--bg);
   color:#2b2b2b;
-  line-height:1.6;
+  line-height:1.65;
 }
 
 .container{
@@ -29,6 +29,7 @@ body{
   padding:20px;
 }
 
+/* HEADER */
 header{
   text-align:center;
   padding:30px 15px;
@@ -45,6 +46,17 @@ header h1{
 header p{
   margin:6px 0;
   font-size:1rem;
+  color:#444;
+}
+
+/* QR */
+.qr-section{
+  text-align:center;
+  margin-top:30px;
+  background:var(--card);
+  padding:26px;
+  border-radius:14px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.05);
 }
 
 /* SUMMARY */
@@ -104,7 +116,7 @@ table{
   font-size:1rem;
 }
 
-th,td{
+th, td{
   border:1px solid var(--border);
   padding:12px;
 }
@@ -122,12 +134,9 @@ td.amount{
 .total-row{
   background:#f0e7dc;
   font-weight:700;
-  font-size:1.05rem;
 }
 
-.negative{
-  color:var(--danger);
-}
+.negative{ color:var(--danger); }
 
 /* FOOTER */
 footer{
@@ -158,22 +167,23 @@ footer p{
   <h1>BÁO CÁO TÀI CHÍNH BÙI TỘC THỨ CHI</h1>
   <p>Địa chỉ: Thôn 3, Quỳnh Thắng, Nghệ An</p>
   <p><strong>Ngày:</strong> 18/01/2026 (30/11/2025 Âm lịch)</p>
+  <p style="font-size:0.95rem;color:#555;">
+    Báo cáo được lập, công bố và lưu trữ chính thức tại Lễ Khánh Thành Nhà Thờ Bùi Tộc Thứ Chi
+  </p>
 </header>
-<!-- QR CODE -->
-<section style="text-align:center; margin-top:30px;">
-  <h2 style="color:#7a4a1f;">Tra cứu báo cáo tài chính</h2>
+
+<section class="qr-section">
+  <h2>Tra cứu báo cáo tài chính</h2>
   <p>Quét mã QR để xem báo cáo đầy đủ trên điện thoại hoặc máy tính</p>
-  <img 
+  <img
     src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=https://buiquocoai.github.io/Bao_Cao_Tai_Chinh_Bui_Toc/"
     alt="QR Code Báo cáo tài chính Bùi Tộc"
-    style="margin-top:10px;"
   />
-  <p style="font-size:0.9rem; color:#555; margin-top:8px;">
+  <p style="font-size:0.9rem;color:#555;margin-top:8px;">
     https://buiquocoai.github.io/Bao_Cao_Tai_Chinh_Bui_Toc/
   </p>
 </section>
 
-<!-- SUMMARY -->
 <div class="summary">
   <div class="summary-card thu">
     <h3>TỔNG THU</h3>
@@ -192,20 +202,19 @@ footer p{
 <section>
 <h2>I. THÔNG TIN CHUNG</h2>
 <p>
-Báo cáo tài chính tổng hợp được lập nhằm phản ánh đầy đủ tình hình
-<strong>thu – chi tài chính phục vụ công tác xây dựng Nhà Thờ Bùi Tộc Thứ Chi</strong>
-và tổ chức <strong>Lễ Khánh Thành</strong>.
+Báo cáo tài chính tổng hợp được lập nhằm phản ánh đầy đủ tình hình thu – chi
+phục vụ công tác xây dựng <strong>Nhà Thờ Bùi Tộc Thứ Chi</strong> và tổ chức
+<strong>Lễ Khánh Thành</strong>.
 </p>
 <p>
-Báo cáo được thực hiện với mục tiêu <strong>công khai, minh bạch tài chính</strong>,
-thông tin rõ ràng đến toàn thể con cháu trong dòng họ, cùng quý đại biểu,
-khách mời và bà con làng xóm.
+Báo cáo được thực hiện trên nguyên tắc công khai, minh bạch, cung cấp thông tin
+rõ ràng đến toàn thể con cháu trong dòng họ, quý đại biểu, khách mời và bà con địa phương.
 </p>
 </section>
 
 <section>
 <h2>II. PHẠM VI VÀ THỜI GIAN BÁO CÁO</h2>
-<p><strong>Phạm vi:</strong> Toàn bộ các khoản thu – chi liên quan đến việc xây dựng Nhà Thờ Bùi Tộc Thứ Chi.</p>
+<p><strong>Phạm vi:</strong> Toàn bộ các khoản thu – chi liên quan đến quá trình xây dựng Nhà Thờ Bùi Tộc Thứ Chi.</p>
 <p><strong>Thời gian:</strong> Tính đến ngày tổ chức Lễ Khánh Thành (18/01/2026 – 30/11/2025 Âm lịch).</p>
 </section>
 
@@ -223,42 +232,33 @@ khách mời và bà con làng xóm.
 <h2>IV. TỔNG HỢP NGUỒN THU</h2>
 <table>
 <tr><th>Nội dung</th><th>Số tiền (VNĐ)</th></tr>
-<tr>
-<td>
-  <a href="https://buiquocoai.github.io/Tong_hop_thu_dinh/"
-     target="_blank"
-     style="color:#7a4a1f; font-weight:600; text-decoration:underline;">
-     Thu đóng đinh + lãi
-  </a>
-</td>
-<td class="amount">407,760,000</td>
-</tr>
+<tr><td>Thu đóng đinh + lãi</td><td class="amount">407,760,000</td></tr>
 <tr>
   <td>
-    <a href="https://buiquocoai.github.io/Bang_Vang_Cung_Tien_Bui_Toc/"
-       target="_blank"
-       style="color:#7a4a1f; font-weight:600; text-decoration:underline;">
-       Thu ủng hộ – cung tiến
+    <a href="https://buiquocoai.github.io/Bang_Vang_Cung_Tien_Bui_Toc/" target="_blank"
+       style="color:#7a4a1f;font-weight:600;text-decoration:underline;">
+      Thu ủng hộ – cung tiến
     </a>
   </td>
   <td class="amount">426,500,000</td>
 </tr>
 <tr>
   <td>
-    <a href="https://buiquocoai.github.io/Bang_Vang_Cung_Tien_Bui_Toc/"
-       target="_blank"
-       style="color:#7a4a1f; font-weight:600; text-decoration:underline;">
-       Thu cho vay
+    <a href="https://buiquocoai.github.io/Bang_Vang_Cung_Tien_Bui_Toc/" target="_blank"
+       style="color:#7a4a1f;font-weight:600;text-decoration:underline;">
+      Thu cho vay
     </a>
   </td>
   <td class="amount">270,000,000</td>
 </tr>
-
 <tr><td>Thu thắp hương khánh thành</td><td class="amount">2,500,000</td></tr>
 <tr><td>Sử dụng quỹ họ xuân</td><td class="amount">20,000,000</td></tr>
 <tr><td>Sử dụng quỹ xây lăng mộ</td><td class="amount">10,000,000</td></tr>
 <tr class="total-row"><td>TỔNG THU</td><td class="amount">1,171,760,000</td></tr>
 </table>
+<p style="margin-top:12px;font-size:0.95rem;color:#555;">
+<i>Các khoản thu ủng hộ – cung tiến và cho vay được công bố chi tiết tại các liên kết tra cứu công khai.</i>
+</p>
 </section>
 
 <section>
@@ -286,8 +286,22 @@ khách mời và bà con làng xóm.
 </table>
 </section>
 
+<section>
+<h2>VI. CÔNG BỐ TRƯỚC LỄ KHÁNH THÀNH</h2>
+<p>
+Trước sự chứng kiến của toàn thể con cháu trong dòng họ, quý đại biểu,
+khách mời và bà con địa phương, Ban Tổ Chức xin trân trọng công bố
+báo cáo tài chính xây dựng Nhà Thờ Bùi Tộc Thứ Chi.
+</p>
+<p>
+Toàn bộ số liệu thu – chi đã được tổng hợp, đối chiếu và công khai minh bạch.
+Mọi ý kiến đóng góp xin được tiếp thu trên tinh thần xây dựng,
+đoàn kết và vì sự phát triển lâu dài của dòng họ.
+</p>
+</section>
+
 <footer>
-<h2>VI. XÁC NHẬN & CAM KẾT</h2>
+<h2>VII. XÁC NHẬN & CAM KẾT</h2>
 <p>Thủ bút: <strong>Bùi Quốc Oai</strong></p>
 <p>Trưởng Tộc: <strong>Bùi Văn Vinh</strong></p>
 <p>Đại diện Ban Xây Dựng: <strong>Bùi Văn Tiến</strong></p>
@@ -295,11 +309,12 @@ khách mời và bà con làng xóm.
 Ban Tổ Chức cam kết số liệu trên là trung thực, chính xác và chịu trách nhiệm
 trước toàn thể dòng họ.
 </p>
+<p style="margin-top:15px;font-style:italic;color:#666;">
+Báo cáo được lưu trữ lâu dài phục vụ công tác đối chiếu, tra cứu
+và truyền đời cho các thế hệ con cháu Bùi Tộc.
+</p>
 </footer>
 
 </div>
 </body>
 </html>
-
-
-
